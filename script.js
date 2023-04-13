@@ -10,7 +10,6 @@ function getComputerChoice() {
     if (randomNumber === 2) {
         computerChoice = "Scissors";
     }
-    console.log(computerChoice);
     return computerChoice;
 }
 
