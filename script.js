@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let computerChoice = "";
+    let computerChoice;
     let randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 0) {
         computerChoice = "Rock";
@@ -20,5 +20,33 @@ function getPlayerSelection() {
     return playerChoice;
 }
 
-getComputerChoice();
-getPlayerSelection();
+function playRound(computerChoice, playerChoice) {
+    computerChoice = getComputerChoice();
+    playerChoice = getPlayerSelection();
+    if (computerChoice === playerChoice) {
+        console.log("Tie game");
+    }
+    else if (computerChoice === "Rock" && playerChoice === "Paper") {
+        console.log("You win. " + playerChoice + " beats " + computerChoice);
+    }
+    else if (computerChoice === "Paper" && playerChoice === "Scissors") {
+        console.log("You win. " + playerChoice + " beats " + computerChoice);
+    }
+    else if (computerChoice === "Scissors" && playerChoice === "Rock") {
+        console.log("You win. " + playerChoice + " beats " + computerChoice);
+    }
+    else if (computerChoice === "Paper" && playerChoice === "Rock") {
+        console.log("You lose. " + computerChoice + " beats " + playerChoice);
+    }
+    else if (computerChoice === "Scissors" && playerChoice === "Paper") {
+        console.log("You lose. " + computerChoice + " beats " + playerChoice);
+    }
+    else if (computerChoice === "Rock" && playerChoice === "Scissors") {
+        console.log("You lose. " + computerChoice + " beats " + playerChoice);
+    }
+    else {
+        console.log("Invalid answer.");
+    }
+}
+
+playRound();
