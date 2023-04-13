@@ -11,6 +11,14 @@ function getComputerChoice() {
         computerChoice = "Scissors";
     }
     console.log(computerChoice);
+    return computerChoice;
+}
+
+function getPlayerSelection() {
+    let playerInput = prompt("Write to choose Rock, Paper or Scissors").toLowerCase();
+    let playerChoice = playerInput.charAt(0).toUpperCase() + playerInput.slice(1);
+    return playerChoice;
 }
 
 getComputerChoice();
+getPlayerSelection();
