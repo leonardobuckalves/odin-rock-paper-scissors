@@ -49,10 +49,36 @@ function playRound(computerChoice, playerChoice) {
 }
 
 function game() {
-    for (let gameCounter = 1; gameCounter <= 5; gameCounter++) {
-        console.log(`Game: ${gameCounter}.`)
-        playRound();
-    }
+    // for (let gameCounter = 1; gameCounter <= 5; gameCounter++) {
+    //     console.log(`Game: ${gameCounter}.`)
+    //     playRound();
+    // }
 }
 
 game();
+
+const container = document.querySelector('#container');
+const div = document.createElement('div');
+
+div.setAttribute('id', "buttons");
+div.classList.add("savage");
+container.appendChild(div);
+
+const btn1 = document.createElement('button');
+btn1.setAttribute("onclick", "console.log('Rock')");
+btn1.textContent = "Rock";
+btn1.addEventListener('click', () => {
+    playRound(getComputerChoice(), getPlayerSelection('Rock'));
+});
+
+const btn2 = document.createElement('button');
+btn2.setAttribute("onclick", "console.log('Paper')");
+btn2.textContent = "Paper";
+
+const btn3 = document.createElement('button');
+btn3.setAttribute("onclick", "console.log('Scissors')");
+btn3.textContent = "Scissors";
+
+div.appendChild(btn1);
+div.appendChild(btn2);
+div.appendChild(btn3);
