@@ -2,4 +2,4 @@
 
 ## Rock Paper Scissors Game
 
-This game uses JavaScript only to play a rock paper scissors console game.
+In this game you play a rock paper scissors against a computer.
