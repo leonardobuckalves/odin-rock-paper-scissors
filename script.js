@@ -87,6 +87,12 @@ const results = document.createElement('div');
 const gameScore = document.createElement('div');
 const roundTextDiv = document.createElement('div');
 
+container.classList.add('spacing');
+title.classList.add('spacing');
+results.classList.add('spacing');
+gameScore.classList.add('spacing');
+roundTextDiv.classList.add('spacing');
+
 title.setAttribute('id', "title")
 container.appendChild(title);
 title.appendChild(titleH1);
